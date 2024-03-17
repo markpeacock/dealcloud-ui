@@ -101,4 +101,4 @@ elif persona == 'Staffing Manager':
 # Finally add to the page
     
 with col1:
-    sac.menu(variant='subtle', items=nav, open_all=True)
+    sac.menu(variant='subtle', items=nav, open_all=False)
