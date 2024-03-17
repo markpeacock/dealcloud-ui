@@ -31,8 +31,8 @@ ip_root_nav = [
 
 sector_ops_nav = [
     sac.MenuItem('Sector Operations', children=[
-                sac.MenuItem('Pipeline Analysis', href="https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/37840"),
-                sac.MenuItem('Activity Analysis', tag=sac.Tag('New', color='red')),
+                sac.MenuItem('Pipeline Analytics', href="https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/37840"),
+                sac.MenuItem('Team Activity Analytics', tag=sac.Tag('New', color='red')),
             ]),
 ]
 
@@ -46,9 +46,9 @@ ip_contacts_nav = [
 ]
 
 deal_nav = [
-    sac.MenuItem('Deals', children=[
+    sac.MenuItem('Deal Pipeline', children=[
                 sac.MenuItem('Active Deals', href="https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/11679"),
-                sac.MenuItem('Pipeline', href="https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/13936"),
+                sac.MenuItem('Pipeline Analytics', href="https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/13936"),
                 sac.MenuItem('Pipeline Snapshots', href='https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/37810'),
                 sac.MenuItem('Bids and Completions', href='https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/13930'),
                 sac.MenuItem('By Sector', href='https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/11683'),
@@ -87,7 +87,7 @@ staffing_nav = [
 nav = []
 
 if persona == 'Investment Professsional':
-    nav = ip_root_nav + sector_ops_nav + ip_contacts_nav + deal_nav + companies_nav
+    nav = ip_root_nav + sector_ops_nav + deal_nav + companies_nav + ip_contacts_nav
 elif persona == 'Staffing Manager':
     nav = staffing_nav
 
