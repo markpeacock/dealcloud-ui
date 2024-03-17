@@ -33,7 +33,7 @@ ip_root_nav = [
 ]
 
 sector_ops_nav = [
-    sac.MenuItem('Sector Operations', children=[
+    sac.MenuItem('Team Operations', children=[
                 sac.MenuItem('Pipeline Analytics', href="https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/37840"),
                 sac.MenuItem('Team Activity Analytics', tag=sac.Tag('New', color='red')),
             ]),
@@ -62,7 +62,8 @@ deal_nav = [
 
 companies_nav = [
     sac.MenuItem('Companies', children=[
-                sac.MenuItem('Portfolio Companies', href="https://www.google.com"),
+                sac.MenuItem('Watchlist', href="https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/11680"),
+                sac.MenuItem('Portfolio Companies', href="https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/11681"),
             ]),
 ]
 
