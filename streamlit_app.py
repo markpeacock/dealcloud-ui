@@ -4,6 +4,7 @@ import streamlit.components.v1 as components
 
 # Setting the page configuration
 st.set_page_config(layout="wide")
+col1, col2, col3 = st.columns(3)
 
 # Sidebar
 
@@ -22,6 +23,8 @@ personas = {
 
 # Add personas as radio buttons
 persona = st.sidebar.radio("Choose a persona:", list(personas.keys()))
+
+# Menu groups
 
 ip_root_nav = [
     sac.MenuItem('Investment Dashboard', href='https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/37308'),
@@ -84,12 +87,18 @@ staffing_nav = [
                 sac.MenuItem('Value Portfolio Staffing', href="https://nordiccapital.dealcloud.eu/portal/pages/11672/reports/34048"),
             ]),
 ]
+
+# Define the menu groups based on role
+
 nav = []
 
 if persona == 'Investment Professsional':
     nav = ip_root_nav + sector_ops_nav + deal_nav + companies_nav + ip_contacts_nav
+
 elif persona == 'Staffing Manager':
     nav = staffing_nav
 
-
-sac.menu(variant='subtle', items=nav, open_all=True)
+# Finally add to the page
+    
+with col1:
+    sac.menu(variant='subtle', items=nav, open_all=True)
